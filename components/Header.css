@@ -1,0 +1,142 @@
+header {
+  background: var(--gray-lightest);
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header:nth-child(1),
+.header:nth-child(2) {
+  flex: 1;
+}
+
+.header:nth-child(3) {
+  flex: 0 1 0.1;
+}
+
+li {
+  list-style: none;
+}
+
+.logo {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+a {
+  color: var(--gray-darkest);
+  text-decoration: none;
+}
+
+.signup-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.auth {
+  --br: 3rem;
+  padding: 0.6rem 1.5rem;
+  border: 1px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  border-radius: var(--br);
+  margin: 0 0.4rem;
+}
+
+.login {
+  border: 1px solid var(--black);
+  color: var(--black);
+  background: var(--gray-lightest);
+  &:hover {
+    background: var(--black);
+    color: var(--gray-lightest);
+    -moz-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+}
+
+.navbar {
+  height: var(--nav-bar-height);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--default-paddings);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-branding {
+  font-size: 2rem;
+}
+
+/* transition for links */
+
+.nav-link {
+  transition: 0.5s ease;
+}
+
+.nav-link:hover {
+  color: dodgerblue;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background: var(--gray-medium);
+  border-radius: 5px;
+}
+
+.nav-item {
+  padding: 0 1.5rem;
+}
+
+@media (max-width: 935px) {
+  .bar {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(11.5px);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-11.5px);
+  }
+
+  .nav-menu {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background: var(--gray-lightest);
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    padding: 1.5rem 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+}

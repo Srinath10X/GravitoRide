@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  /* ---------------- Colors ---------------- */
+
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --gray-lightest: hsla(0, 0%, 95%, 1);
+  --gray-lighter: hsla(0, 0%, 85%, 1);
+  --gray-light: hsla(0, 0%, 75%, 1);
+  --gray-medium: hsla(0, 0%, 60%, 1);
+  --gray-dark: hsla(0, 0%, 45%, 1);
+  --gray-darkest: hsla(0, 0%, 30%, 1);
+
+  --nav-bar-height: 80px;
+  --default-paddings: 0 clamp(7.5%, 2vw, 15%);
+
+  --font-size-small: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xlarge: 1.5rem;
+  --font-size-xxlarge: 2rem;
+  --font-size-xxxlarge: 2.5rem;
+
+  font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--gray-lightest);
+  min-height: 100%;
+  max-height: 400%;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
