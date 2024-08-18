@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import "./styles/App.css";
 import Testimonial from "../components/Testimonial";
+import AuthPage from "./pages/Auth";
 
 const App = () => {
   const testimonialsData = [
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <AuthPage />
       <section className="first-section">
         <section className="main-section">
           <div className="right">

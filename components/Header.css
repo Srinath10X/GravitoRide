@@ -48,11 +48,14 @@ a {
   border: 1px solid var(--black);
   color: var(--black);
   background: var(--gray-lightest);
-  &:hover {
-    background: var(--black);
-    color: var(--gray-lightest);
-    -moz-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+}
+
+.signup {
+  h1 {
+    color: var(--black);
+  }
+  button {
+    color: var(--white);
   }
 }
 

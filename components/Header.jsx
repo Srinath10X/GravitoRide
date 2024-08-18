@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Header.css";
+import AuthPage from "../src/pages/Auth";
 
 const Header = () => {
   const menuItems = [
@@ -54,12 +55,12 @@ const Header = () => {
             <div className="signup-wrapper">
               <li className="nav-menu">
                 <a href="#" className="auth login">
-                  Login
+                  <AuthPage text="Login" />
                 </a>
               </li>
               <li className="nav-menu">
                 <a href="#" className="auth signup">
-                  Sign Up
+                  <AuthPage text="SignIn" color="white" />
                 </a>
               </li>
             </div>
