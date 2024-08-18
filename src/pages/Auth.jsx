@@ -44,11 +44,10 @@ function AuthPage(props) {
               &times;
             </span>
             <h1>{isLogin ? "Login" : "Signup"}</h1>
+            {isLogin ? <LoginForm /> : <SignupForm />}
             <button onClick={handleSwitch}>
               {isLogin ? "Switch to Signup" : "Switch to Login"}
             </button>
-
-            {isLogin ? <LoginForm /> : <SignupForm />}
           </div>
         </div>
       )}
@@ -79,7 +78,7 @@ function LoginForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Email:</label>
+        <label>Email</label>
         <input
           type="email"
           value={email}
@@ -88,7 +87,7 @@ function LoginForm() {
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label>Password</label>
         <input
           type="password"
           value={password}
@@ -126,7 +125,7 @@ function SignupForm() {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label>Email:</label>
+        <label style={ {marginTop: "1rem"}}>Email</label>
         <input
           type="email"
           value={email}
@@ -135,7 +134,7 @@ function SignupForm() {
         />
       </div>
       <div>
-        <label>Password:</label>
+        <label>Password</label>
         <input
           type="password"
           value={password}
@@ -144,7 +143,7 @@ function SignupForm() {
         />
       </div>
       <div>
-        <label>Confirm Password:</label>
+        <label>Confirm Password</label>
         <input
           type="password"
           value={confirmPassword}
